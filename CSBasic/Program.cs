@@ -10,6 +10,8 @@ namespace CSBasic
     {
 
         string Var = "테스트";
+        // var는 지역변수만 가능
+        // var somethint = "아하하";
 
         static void Main(string[] args)
         {
@@ -203,6 +205,11 @@ namespace CSBasic
 
 
 
+            Console.WriteLine();
+            var number3 = 100;
+            var number4 = "뮻";
+            var number5 = 100.0;
+            var number6 = 100.0f;
 
 
 
