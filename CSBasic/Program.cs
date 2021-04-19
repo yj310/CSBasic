@@ -28,6 +28,7 @@ namespace CSBasic
              * 여러줄 주석
              */
 
+            Console.WriteLine();
             Console.Write("개행이 안되는 출력");
             Console.WriteLine("");
             Console.WriteLine("개행이 되는 출력");
@@ -35,6 +36,7 @@ namespace CSBasic
 
 
 
+            Console.WriteLine();
             Console.WriteLine(52);
             // Arithmetic Operator + - * /
             Console.WriteLine(52 + 273);
@@ -106,6 +108,30 @@ namespace CSBasic
 
             Console.WriteLine(3 < DateTime.Now.Hour
                 && DateTime.Now.Hour < 8);
+
+
+
+
+            Console.WriteLine();
+            // Integer overflow
+            int a = 2147483647;
+            int b = 1;
+            Console.WriteLine(a + b);
+
+            double c = 52.263;
+            char d = '아';
+
+            // sizeof 연산자
+            Console.WriteLine("int: " + sizeof(int));
+            Console.WriteLine("long: " + sizeof(long));
+            Console.WriteLine("float: " + sizeof(float));
+            Console.WriteLine("double: " + sizeof(double));
+            Console.WriteLine("char: " + sizeof(char));
+            Console.WriteLine("bool: " + sizeof(bool));
+
+            bool TrueOrFalse = true;
+
+
 
 
 
