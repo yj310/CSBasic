@@ -214,6 +214,26 @@ namespace CSBasic
 
 
 
+
+
+            Console.WriteLine();
+            string input = Console.ReadLine();
+            Console.WriteLine("input: " + input);
+            // while((input = Console.ReadLine()) != null) 
+            while(true)
+            {
+                input = Console.ReadLine();
+                if(input != "q")
+                {
+                    Console.WriteLine(input);
+                }
+                else
+                {
+                    break;
+                }
+            }
+
+
         }
     }
 }
