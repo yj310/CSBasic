@@ -128,13 +128,51 @@ namespace CSBasic2
 
 
 
+            Console.WriteLine();
+            Console.WriteLine("인사 판별기");
+            Console.Write("입력> ");
+            String line = Console.ReadLine();
+            if(line.Contains("안녕"))
+            {
+                Console.WriteLine("안녕");
+            }
+            else
+            {
+                Console.WriteLine("^^*");
+            }
 
 
 
 
+            // 키 입력 구분
+            ConsoleKeyInfo info;
+            bool isInput = true;
 
-
-
+            while (isInput)
+            {
+                info = Console.ReadKey();
+                switch(info.Key)
+                {
+                    case ConsoleKey.UpArrow:
+                        Console.Write("A");
+                        break;
+                    case ConsoleKey.DownArrow:
+                        Console.Write("V");
+                        break;
+                    case ConsoleKey.LeftArrow:
+                        Console.Write("<");
+                        break;
+                    case ConsoleKey.RightArrow:
+                        Console.Write(">");
+                        break;
+                    case ConsoleKey.Escape:
+                        isInput = false;
+                        break;
+                    default:
+                        Console.Write("#^^#~");
+                        break;
+                }
+            }
 
 
 
