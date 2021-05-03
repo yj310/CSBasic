@@ -10,6 +10,23 @@ namespace CSBasic3
     {
         static void Main(string[] args)
         {
+
+            int[] intArray = { 52, 172, 13, 13, 103 };
+            intArray[2] = 0;
+
+            Console.WriteLine(intArray[0]);
+            Console.WriteLine(intArray[1]);
+            Console.WriteLine(intArray[2]);
+            Console.WriteLine(intArray[3]);
+            Console.WriteLine(intArray[4]);
+            Console.WriteLine(intArray.Length);
+            Console.WriteLine();
+
+            int[] intArray2 = new int[1000];
+            Console.WriteLine(intArray2[0]);
+            Console.WriteLine(intArray2[999]);
+
+
         }
     }
 }
