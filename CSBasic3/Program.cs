@@ -62,6 +62,29 @@ namespace CSBasic3
 
             Console.WriteLine();
 
+            for(int i2 = '가'; i2 <= '힣'; i2++)
+            {
+                Console.Write((char)i2);
+            }
+
+            Console.WriteLine();
+            Console.WriteLine();
+
+            for (int i2 = intArray3.Length - 1; i2 >= 0; i2--)
+            {
+                Console.WriteLine(intArray3[i2]);
+            }
+
+
+            Console.WriteLine();
+
+
+
+
+
+
+
+
         }
     }
 }
