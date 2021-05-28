@@ -151,6 +151,35 @@ namespace CSBasic4
                 new Student() { name = "함기훈", favorityFood = "밀크티" }
             };
 
+
+            Console.WriteLine();
+
+
+            foreach(var item in students)
+            {
+                Console.WriteLine(item.name + " : " + item.grade);
+            }
+            Console.WriteLine();
+
+            for(int i = 0; i < students.Count; i++)
+            {
+                if(students[i].grade > 0)
+                {
+                    students.RemoveAt(i);
+                    i--;
+                }
+            }
+
+            for(int i = students.Count - 1; i >= 0; i--)
+            {
+                if(students[i].grade > 0)
+                {
+                    students.RemoveAt(i);
+                }
+            }
+
+            foreach (var item in students)
+                Console.WriteLine(item.name + " : " + item.grade);
         }
     }
 
