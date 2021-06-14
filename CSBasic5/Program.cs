@@ -15,15 +15,32 @@ namespace CSBasic5
 
             Console.WriteLine(m1.Multi(52, 273));
             Console.WriteLine(m1.Multi(103, 32));
+            Console.WriteLine();
 
             m1.Print();
+            Console.WriteLine();
 
             Console.WriteLine(m1.Sum(1, 100));
+            Console.WriteLine();
+
+            MyMath.Abs(52);
+            MyMath.Abs(273);
+            MyMath.Abs(-453);
+            Console.WriteLine();
+
+            // MyMath.Abs(52.273);
+            MyMath.Abs(52.273f);
+            MyMath.Abs(300000000000);
+            Console.WriteLine();
 
 
-            Console.WriteLine(MyMath.Abs(52));
-            Console.WriteLine(MyMath.Abs(273));
-            Console.WriteLine(MyMath.Abs(-453));
+
+
+
+
+
+
+
 
 
 
@@ -31,21 +48,25 @@ namespace CSBasic5
 
         class MyMath
         {
-            public static int Abs(int input)
+            /*public static void Abs(int input)
             {
-                return (input < 0) ? -input : input;
-                
-                /*
-                if(input < 0)
-                {
-                    return -input;
-                } 
-                else
-                {
-                    return input;
-                }
-                */
+                Console.WriteLine("int: " + ((input < 0) ? -input : input));
+            }*/
+            /*
+            public static void Abs(double input)
+            {
+                Console.WriteLine("double: " + ((input < 0) ? -input : input));
+            }*/
+
+            public static void Abs(float input)
+            {
+                Console.WriteLine("float: " + ((input < 0) ? -input : input));
             }
+
+            /*public static void Abs(long input)
+            {
+                Console.WriteLine("long: " + ((input < 0) ? -input : input));
+            }*/
         }
 
         class MultiClass
