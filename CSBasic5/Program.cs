@@ -36,7 +36,10 @@ namespace CSBasic5
 
 
 
-
+            m1.somePublic();
+            // m1.someDefault();
+            // m1.somePrivate();
+            Console.WriteLine();
 
 
 
@@ -71,6 +74,22 @@ namespace CSBasic5
 
         class MultiClass
         {
+            public void somePublic()
+            {
+                Console.WriteLine("public!");
+            }
+
+            void someDefault()
+            {
+                Console.WriteLine("Default!");
+            }
+
+            private void somePrivate()
+            {
+                Console.WriteLine("private!");
+            }
+
+
             public int Multi(int x, int y)
             {
                 return x * y;
