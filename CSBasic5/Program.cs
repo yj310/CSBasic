@@ -136,6 +136,12 @@ namespace CSBasic5
                 get { return this.width * this.height; }
             }
 
+            /*
+            public int Area()
+            {
+                return this.width * this.height;
+            }
+            */
 
         }
 
