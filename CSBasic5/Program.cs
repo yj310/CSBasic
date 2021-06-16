@@ -63,8 +63,78 @@ namespace CSBasic5
 
 
 
+            Box box = new Box(10, 10);
+            box.Height = 100;
+            box.Width = 200;
+            box.Price = 3000;
+            Console.WriteLine("박스의 면적은: " + box.Area);
+            Console.WriteLine();
 
 
+
+        }
+
+        class Box
+        {
+            // 템플릿을 이용하면 편하다!!
+            // prop
+            // propfull
+            public int some { get; set; }
+            private int myVar;
+            public int MyProperty
+            {
+                get { return myVar; }
+                set { myVar = value; }
+            }
+
+
+
+            public int Price { get; set; }
+            private int width;
+            public int Width
+            {
+                get { return width; }
+                set 
+                {
+                    if (value > 0)
+                    {
+                        this.width = value;
+                    }
+                    else
+                    {
+                        Console.WriteLine("너비는 양수를 입력해주세요.");
+                    }
+                }
+            }
+
+            private int height;
+            public int Height
+            {
+                get { return height; }
+                set
+                {
+                    if (value > 0)
+                    {
+                        this.height = value;
+                    }
+                    else
+                    {
+                        Console.WriteLine("높이는 양수를 입력해주세요.");
+                    }
+                }
+            }
+
+            public Box(int width, int height)
+            {
+                this.width = width;
+                this.height = height;
+            }
+
+            private int area;
+            public int Area
+            {
+                get { return this.width * this.height; }
+            }
 
 
         }
