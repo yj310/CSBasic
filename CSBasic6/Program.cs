@@ -30,8 +30,55 @@ namespace CSBasic6
 
     class Program
     {
+        abstract class AbstractParent
+        {
+            public abstract void Test();
+        }
+
+        class AbstractChild : AbstractParent
+        {
+            public override void Test() { }
+        }
+        class Parent
+        {
+            public int variable = 273;
+            public virtual void Method()
+            {
+                Console.WriteLine("부모의 메서드");
+            }
+        }
+
+        class Child : Parent
+        {
+            public string variable = "shadowing";
+            public override void Method()
+            {
+                Console.WriteLine("자식의 메서드");
+            }
+        }
+
         static void Main(string[] args)
         {
+            Child child = new Child();
+            child.Method();
+            ((Parent)child).Method();
+
+
+            //Console.WriteLine(((Parent)(new Child())).variable);
+            //Console.WriteLine((new Child()).variable);
+
+            /*List<Animal> Animals = new List<Animal>
+            {
+                new Dog(), new Cat(), new Cat(), new Dog(),
+                new Dog(), new Cat(), new Dog(), new Dog()
+            };
+
+            foreach(var item in Animals)
+            {
+                item.Eat();
+                item.Sleep();
+                ((Cat)item).Meow();
+            }*/
         }
     }
 }
