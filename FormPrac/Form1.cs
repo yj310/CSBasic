@@ -20,6 +20,7 @@ namespace FormPrac
         public Form1()
         {
             InitializeComponent();
+            //IsMdiContainer = true;
         }
 
         private void btnMessageBox1_Click(object sender, EventArgs e)
@@ -50,6 +51,20 @@ namespace FormPrac
                     break;
             }
 
+        }
+
+        private void btnModalless_Click(object sender, EventArgs e)
+        {
+            Form form = new FormCustom();
+            //form.MdiParent = this;
+            if(sender == btnModaless)
+            {
+                form.Show();
+            }
+            else if(sender == btnModal)
+            {
+                form.ShowDialog();
+            }
         }
     }
 }
