@@ -10,6 +10,7 @@ namespace CSBasic7
     class Products
     {
         private static List<string> products = new List<string>();
+
         public Products()
         {
             products.Add("짜장면");
@@ -20,12 +21,15 @@ namespace CSBasic7
             products.Add("꽃빵");
 
         }
+
         public string this[int i]
         {
             get { return products[i]; }
             set { Console.WriteLine(i + "번째 상품 설정"); }
         }
     }
+
+
     class Wanted<T>
         // where T : Student
     {
@@ -43,11 +47,50 @@ namespace CSBasic7
 
     class Program
     {
+        static void NextPosition(int x, int y, int vx, int vy, out int rx, out int ry)
+        {
+            rx = x + vx;
+            ry = y + vy;
+        }
+
+
+
+
         static void Main(string[] args)
         {
+            int x = 0;
+            int y = 0;
+            int vx = 100;
+            int vy = 100;
+
+            Console.WriteLine("현재 좌표: (" + x + ", " + y + ")");
+            NextPosition(x, y, vx, vy, out x, out y);
+            Console.WriteLine("다음 좌표: (" + x + ", " + y + ")");
+
+
+
+            Console.WriteLine("숫자 입력: ");
+            int output = int.MinValue;
+            bool result = int.TryParse(Console.ReadLine(), out output);
+
+            if (result)
+            {
+                Console.WriteLine("입력한 숫자: " + output);
+            }
+            else
+            {
+                Console.WriteLine("숫자를 입력해주세요!" + output);
+            }
+
+
+
+
             Products p = new Products();
             Console.WriteLine(p[2]);
             Console.WriteLine((new Products())[2]);
+
+
+
 
             Wanted<string> wantedString = new Wanted<string>("스트링");
             Wanted<int> wantedInt = new Wanted<int>(3);
