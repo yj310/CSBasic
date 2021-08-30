@@ -16,5 +16,35 @@ namespace CSBasic7_menu
         {
             InitializeComponent();
         }
+
+        private void 메모자정보ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("가짜 메모장~");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if(toolStripProgressBar1.Value + 10 < toolStripProgressBar1.Maximum)
+            {
+                toolStripProgressBar1.Value += 10;
+            }
+            else
+            {
+                toolStripProgressBar1.Value = toolStripProgressBar1.Maximum;
+            }
+        }
+
+        private void 상태표시줄ToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            상태표시줄ToolStripMenuItem1.Checked = !상태표시줄ToolStripMenuItem1.Checked;
+            if(상태표시줄ToolStripMenuItem1.Checked)
+            {
+                statusStrip1.Visible = true;
+            }
+            else
+            {
+                statusStrip1.Visible = false;
+            }
+        }
     }
 }
